@@ -1,6 +1,6 @@
 ---
-title: Paris, A Moveable Feast
-subtitle: Three days of stale bread, soft stone, and learning to slow down.
+title: Paris
+subtitle: Learning to slow down.
 date: 2026-07-09
 categories: travel
 published: true
