@@ -1,0 +1,44 @@
+---
+title: driftnotes
+layout: null
+---
+
+<html>
+<head>
+    <title>driftnotes</title>
+    <meta charset='UTF-8'>
+    <meta content='width=device-width, initial-scale=1' name='viewport'/>
+    <meta name='description' content='{{ site.description }}'>
+    <meta name='author' content='{{ site.author }}'>
+
+    <link rel='shortcut icon' href='/favicon.png' />
+    <link href='/css/blog.css' rel='stylesheet'/>
+</head>
+<body>
+    {% include nav.html %}
+    <div id='blog' class='wrap'>
+        <div id='intro'>
+            <div class='quote'>
+                <p>"If you are lucky enough to have lived in Paris as a young man, then wherever you go for the rest of your life, it stays with you, for Paris is a moveable feast."</p>
+                <a href='https://en.wikipedia.org/wiki/A_Moveable_Feast' target='_blank'>Ernest Hemingway</a>
+            </div>
+        </div>
+        <div id='posts' class='section'>
+            {% for post in site.posts %}
+                <div class='post-row'>
+                    <p class='post-title'>
+                        <a href="{{ post.url }}">{{ post.title }}</a>
+                    </p>
+                    <p class='post-date'>
+                        {{ post.date | date_to_long_string }}
+                    </p>
+                </div>
+                <p class='post-subtitle'>
+                    {{ post.subtitle }}
+                </p>
+                <span class='hidden'>{{ forloop.index }}</span>
+            {% endfor %}
+        </div>
+    </div>
+</body>
+</html>
